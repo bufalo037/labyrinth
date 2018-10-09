@@ -31,10 +31,3 @@ back of the list in O(1).
 
 ===============================================================================
 ===============================================================================
-
-Am explicat in acest README in mare cum functioneaza programul, detalii mai 
-legate de implementare le contine javadoc-ul aferent atasat temei, si
-comentariile din cod.
-
-===============================================================================
-=============================================================================
