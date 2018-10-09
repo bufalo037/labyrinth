@@ -1,39 +1,33 @@
 ===============================================================================
 									Costea Mihai 
-										322CB
-===============================================================================
-									  POO Tema3
 ===============================================================================
 ===============================================================================
-
-Mai intai se citesc datele de intrare si se creaza labirintul dupa care in 
-functie de task se alege strategia pe care se merge. Daca este task-ul 1, eroul,
-un obiect, este pus in interiorul celulei de start, si dupa algoritmul prezentat
-in cerinta inceaca sa gaseasca iesirea. Algoritmul a fost implementat 
-folosindu-ma de logica numerelor complexe si anume ca un numar imultit cu i
-face de fapt o rotatie de 90 de grade in plan , fiind vorba de un obiect 2D
-precum un labirint, totul a fost ok. A trebuit totusi sa inversez stanga cu
-dreapta deoarece cand crestea ordonata ar fi trebuit sa scad din indecele de
-linie si asa ideea de mers in jos ar fi devenit mers in sus si invers. Dar
-rotind planul complex cu 180 de grade (stanga devine dreapta si invers),
-aceasta problema s-a rezolvat. In continuare eroul apeleaza o metoda care
-spune care sunt celulele adiacente celulei in care acesta se afla(viziunea
-eroului). Si dupa acesta le compara folosindu-se de un TreeSet cu un compartor.
-Comparatorul resprecta ordinea relativa la orientarea eroului, si alege mereu
-celula de exit daca este posibil. Dupa ce au fost sortate celulele in functie
-de prioritate, eroul o alege pe prima si dupa avanseaza. Isi noteaza de cate 
-ori a fost in celula precedenta. Dupa ce a ajuns la iesire se afiseaza in fisier
-drumul pe care acesta l-a urmat.
+Firstly, the entry data is read and the labyrinth gets created. Afterwards, 
+depending on the task, a strategy is chosen. If task 1 gets chosen, the hero or
+the object is placed inside the starting cell and the algorithm presented in 
+the exercise tries to find the exit. The algorithm was implemented using the 
+complex number logic, specifically, a number multiplied by I actually make a 90 
+degrees rotation in plane. Considering this is a 2D object, such as a labyrinth,
+everything worked correctly. However, I had to inverse the left and right 
+directions because when the ordinate was growing I was supposed to lower the 
+line indices, therefore reversing the up and down directions. But, by rotating 
+the plane by 180 degrees (right becomes left and vice versa), this problem was
+successfully resolved. The hero uses a method that says which cells are adjacent
+to the cell he's standing in (the hero's perspective). Afterwards, he compares 
+them using a TreeSet with a comparator. The comparator respects the relative 
+order to the hero's orientation and always chooses an exit cell if possible.
+After the cells were sorted by priority, the hero chooses the first and 
+advances. He takes note of how many times he was in the previous cell. Once he 
+reaches the exit, the path he followed is displayed in the file.
 
 ===============================================================================
 ===============================================================================
 
-Task-ul 2 implementeaza un algoritm in care eroul merge pe toate path-urile 
-simultan in paralel, si se opreste cand a gasit un drum pe unul din path-uri.
-Dupa care isi noteaza drumul. Am aflat ulterior ca acest algoritm se numeste
-algoritmul lui Lee si, ca coada eu am folosit o lista simplu inlantuia din
-caua proprietatii ei ca se sterge un element de la inceput sau de la sfarsit
-in O(1), la fel si pentru adaugare.
+Task 2 implements an algorithm in which the hero walks on all the paths 
+simultaneously in parallel and stops once he finds the route on one of the 
+paths. Afterwards, he starts noting his way. As a queue i used a linked list
+because of it's proprerty that I can delete an element from the front or the
+back of the list in O(1).
 
 ===============================================================================
 ===============================================================================
